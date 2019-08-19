@@ -362,6 +362,7 @@ longest_name_length = 0
         end
       end
     end
+  end
   
     game_hash.each do |location, team|
   #binding.pry
@@ -382,6 +383,7 @@ longest_name_length = 0
         end
       end
     end
+  end
  stealer == longest_name ? true : false
  
 end
