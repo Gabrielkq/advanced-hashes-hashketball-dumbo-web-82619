@@ -362,7 +362,7 @@ longest_name_length = 0
         end
       end
     end
-  end
+  
     game_hash.each do |location, team|
   #binding.pry
     team.each do |key, value|
