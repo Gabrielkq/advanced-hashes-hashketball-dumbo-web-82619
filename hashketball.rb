@@ -301,6 +301,7 @@ game_hash[:home][:players].each do |player|
     binding.pry
   end
   end
+  end
 end
 #game_hash[:away][:players][:points]
 
