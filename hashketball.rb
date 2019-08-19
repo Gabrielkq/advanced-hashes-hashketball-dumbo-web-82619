@@ -342,6 +342,8 @@ longest_name_length = 0
 def long_name_steals_a_ton?
   most_steals = 0
   stealer = nil
+  longest_name = nil
+longest_name_length = 0
   game_hash.each do |location, team|
   #binding.pry
     team.each do |key, value|
@@ -361,7 +363,26 @@ def long_name_steals_a_ton?
       end
     end
   end
- stealer == player_with_longest_name ? true : false
+    game_hash.each do |location, team|
+  #binding.pry
+    team.each do |key, value|
+    #binding.pry
+      if key == :players
+         value.each do |data|
+       
+        # binding.pry
+          if data[:player_name].length > longest_name_length 
+            #binding.pry 
+          longest_name = data[:player_name]
+         longest_name_length = data[:player_name].length
+          #binding.pry
+    
+          end
+        end
+      end
+    end
+ stealer == longest_name ? true : false
+ 
 end
 
 #num_points_scored(game_hash)
