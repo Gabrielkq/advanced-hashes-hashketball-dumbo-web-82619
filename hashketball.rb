@@ -302,6 +302,7 @@ awayn = game_hash[:away][:team_name]
         # binding.pry
           if location == :home
             homet += data[:points]
+            binding.pry
           if location == :away
             awayt += data[:points]
     end
