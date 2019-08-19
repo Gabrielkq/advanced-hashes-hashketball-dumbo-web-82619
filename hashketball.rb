@@ -255,6 +255,55 @@ def big_shoe_rebounds
  #  binding.pry
 end
 
+def most_points_scored
+    most_points = 0
+   point_leader = "fake name"
+   
+  game_hash.each do |location, team|
+  #binding.pry
+    team.each do |key, value|
+    #binding.pry
+      if key == :players
+         value.each do |data|
+       
+        # binding.pry
+          if data[:points] > most_points
+            #binding.pry 
+          most_points = data[:points]
+         point_leader = data[:player_name]
+          #binding.pry
+    
+          end
+        end
+      end
+    end
+  end
+   
+ point_leader
+ #  binding.pry
+end
+
+
+def winning_team
+  
+homet=0 
+awayt = 0
+homen = game_hash[:home][:team_name]
+
+awayn = game_hash[:away][:team_name]
+
+game_hash[:home][:players].each do |player|
+  #binding.pry
+  homet = player[:points].reduce(:+)
+    
+    binding.pry
+  end
+end
+#game_hash[:away][:players][:points]
+
+#homet > awayt ? homen : awayn
+
+end
 
 
 #num_points_scored(game_hash)
