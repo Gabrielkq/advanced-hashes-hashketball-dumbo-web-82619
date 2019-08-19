@@ -312,9 +312,7 @@ awayn = game_hash[:away][:team_name]
       end
     end
   end
-   
- point_leader
- #  binding.pry
+homet > awayt ? homen : awayn
 end
 
 
