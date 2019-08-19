@@ -292,18 +292,27 @@ homen = game_hash[:home][:team_name]
 
 awayn = game_hash[:away][:team_name]
 
-game_hash[:home][:players].each do |data|
+  game_hash.each do |location, team|
   #binding.pry
-  if data == :points
-    homet =+ data
-  
-    binding.pry
+    team.each do |key, value|
+    #binding.pry
+      if key == :players
+         value.each do |data|
+       
+        # binding.pry
+          if location == :home
+            homet += data[:points]
+          if location == :away
+            awayt += data[:away]
+    end
+          end
+        end
+      end
+    end
   end
-end
-#game_hash[:away][:players][:points]
-
-#homet > awayt ? homen : awayn
-
+   
+ point_leader
+ #  binding.pry
 end
 
 
