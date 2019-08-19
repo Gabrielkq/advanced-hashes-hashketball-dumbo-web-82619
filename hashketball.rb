@@ -315,6 +315,33 @@ awayn = game_hash[:away][:team_name]
 homet > awayt ? homen : awayn
 end
 
+def player_with_longest_name
+longest_name = nil
+longest_name_length = 0
+
+  game_hash.each do |location, team|
+  #binding.pry
+    team.each do |key, value|
+    #binding.pry
+      if key == :players
+         value.each do |data|
+       
+        # binding.pry
+          if data[:player_name].length > longest_name_length 
+            #binding.pry 
+          longest_name = data[:player_name]
+         longest_name_length = data[:player_name].length
+          #binding.pry
+    
+          end
+        end
+      end
+    end
+  end
+   
+longest_name
+ #  binding.pry
+end
 
 
 
