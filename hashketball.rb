@@ -378,7 +378,7 @@ most_steals = 0
       end
     end
   end
-  
+  game_hash.each do |location, team|
   team.each do |key, value|
     #binding.pry
       if key == :players
