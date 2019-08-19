@@ -292,7 +292,7 @@ homen = game_hash[:home][:team_name]
 
 awayn = game_hash[:away][:team_name]
 
-game_hash[:home][:players].each do |player|
+game_hash[:home][:players].each do |data|
   #binding.pry
   player[:points].each do |p, score|
       binding.pry
