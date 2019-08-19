@@ -379,6 +379,7 @@ longest_name_length = 0
     
           end
         end
+        end
       end
     end
  stealer == longest_name ? true : false
