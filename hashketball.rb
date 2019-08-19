@@ -378,8 +378,26 @@ most_steals = 0
       end
     end
   end
+  
+  team.each do |key, value|
+    #binding.pry
+      if key == :players
+         value.each do |data|
+       
+        # binding.pry
+          if data[:steals] > most_steals
+            #binding.pry 
+          most_steals = data[:steals]
+         stealer = data[:player_name]
+          #binding.pry
+    
+          end
+        end
+      end
+    end
+  
    
-longest_name
+longest_name == stealer ? true : false
  #  binding.pry
 end
 
