@@ -303,7 +303,7 @@ awayn = game_hash[:away][:team_name]
           if location == :home
             homet += data[:points]
           if location == :away
-            awayt += data[:away]
+            awayt += data[:points]
     end
           end
         end
