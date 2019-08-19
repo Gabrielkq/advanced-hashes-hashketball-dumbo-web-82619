@@ -395,7 +395,7 @@ most_steals = 0
         end
       end
     end
-  
+  end
    
 longest_name == stealer ? true : false
  #  binding.pry
