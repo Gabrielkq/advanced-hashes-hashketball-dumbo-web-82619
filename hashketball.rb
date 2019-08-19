@@ -337,6 +337,7 @@ longest_name_length = 0
         end
       end
     end
+    longest_name
   end
    
 def long_name_steals_a_ton?
