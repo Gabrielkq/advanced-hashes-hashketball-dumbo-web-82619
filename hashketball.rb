@@ -294,9 +294,8 @@ awayn = game_hash[:away][:team_name]
 
 game_hash[:home][:players].each do |data|
   #binding.pry
-  player[:points].each do |p, score|
-      binding.pry
-    homet += score
+  if data == :points
+    homet =+ data
   
     binding.pry
   end
